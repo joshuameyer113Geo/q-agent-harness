@@ -2,6 +2,8 @@
 
 Starter kit for building an agent harness that helps AI agents write, test, fix, and ship software more reliably.
 
+New here? Start with [the 3 upgrades](docs/three-upgrades.md).
+
 This repo is built around three ideas:
 
 1. A map
