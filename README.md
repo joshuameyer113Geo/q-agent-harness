@@ -4,6 +4,8 @@ Starter kit for building an agent harness that helps AI agents write, test, fix,
 
 New here? Start with [the 3 upgrades](docs/three-upgrades.md).
 
+Want the full setup? [docs/my-setup.md](docs/my-setup.md) has the three pieces.
+
 This repo is built around three ideas:
 
 1. A map
