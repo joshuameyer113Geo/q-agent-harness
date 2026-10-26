@@ -6,6 +6,8 @@ New here? Start with [the 3 upgrades](docs/three-upgrades.md).
 
 Done those? [The loop](docs/harness-loop.md) is how you test them, based on Google's Harness² paper.
 
+Curious what all of this costs? [The harness tax](docs/harness-tax.md) shows how to measure what Claude Code loads before you type, and what to cut.
+
 Want the full setup? [docs/my-setup.md](docs/my-setup.md) has the three pieces.
 
 This repo is built around three ideas:
@@ -228,6 +230,7 @@ same architectural decision twice.
 - [docs/starter-checklist.md](docs/starter-checklist.md): practical harness checklist
 - [docs/task-setups.md](docs/task-setups.md): how the harness should change for debugging, research, and decisions
 - [docs/harness-loop.md](docs/harness-loop.md): Google's eight harness components mapped onto this kit, and their propose, run, compare, keep, log loop written as a one-session checklist
+- [docs/harness-tax.md](docs/harness-tax.md): how to measure what Claude Code loads before you type with `/context`, and what to cut first
 - [docs/repo-structure.md](docs/repo-structure.md): sample repo layout and why it matters
 - [docs/product.md](docs/product.md), [docs/architecture.md](docs/architecture.md), [docs/operations.md](docs/operations.md): example repo-local context for the `WorkspaceHub` sample app
 - [docs/approval-policy.md](docs/approval-policy.md) and [docs/architecture-boundaries.md](docs/architecture-boundaries.md): public examples of guardrails and structural boundaries
