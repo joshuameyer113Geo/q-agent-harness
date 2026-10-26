@@ -42,17 +42,72 @@ System prompt and System tools are Claude Code's own. You can't cut them. MCP to
 
 I ran it on my own setup. 28.4k tokens loaded before I typed a word.
 
-18.2k of that was built-in tools, which I can't touch. 6k was 32 skills. When I checked my session logs, 3 of them had been used in the last 30 days. I kept one more I couldn't confirm either way. My 60 MCP tools cost 625 tokens in context, because they load on demand. A separate 46.5k was listed as deferred, and it only loads when a tool is used.
+18.2k of that was built-in tools, which I can't touch. 6k was 32 skills. When I checked my session logs, 3 of them had been used in the last 30 days. I kept one more I couldn't confirm either way. My 60 MCP tools cost 625 tokens in context, because they load on demand.
 
-After I turned off the skills I don't use, it was 19 skills and 2.9k.
+After I moved the skills I don't use out of the folder, it was 19 skills and 2.9k. That lasted until the next sync brought them back, which is why step 2 below says to turn them off at claude.ai instead.
 
 Before:
 
-<!-- before -->
+```
+Context Usage
+Opus 5.5 (1M context)
+claude-opus-5-5[1m]
+28.4k/1m tokens (3%)
+
+Estimated usage by category
+System prompt: 2.6k tokens (0.3%)
+System tools: 18.2k tokens (1.8%)
+MCP tools: 625 tokens (0.1%)
+MCP server instructions: 717 tokens (0.1%)
+Memory files: 324 tokens (0.0%)
+Skills: 6k tokens (0.6%)
+Messages: 10 tokens (0.0%)
+Free space: 938.6k (93.9%)
+Autocompact buffer: 33k tokens (3.3%)
+
+Auto-compact window: 1m tokens
+
+MCP tools · /mcp (loaded on-demand)
+└ 60 tools · 625 tokens
+
+Memory files · /memory
+└ 2 files · 324 tokens
+
+Skills · /skills
+└ 32 skills · 6k tokens
+```
 
 After:
 
-<!-- after -->
+```
+Context Usage
+Opus 5.5 (1M context)
+claude-opus-5-5[1m]
+57.7k/1m tokens (6%)
+
+Estimated usage by category
+System prompt: 2.6k tokens (0.3%)
+System tools: 22.4k tokens (2.2%)
+MCP server instructions: 717 tokens (0.1%)
+Memory files: 324 tokens (0.0%)
+Skills: 2.9k tokens (0.3%)
+Messages: 28.8k tokens (2.9%)
+Free space: 909.3k (90.9%)
+Autocompact buffer: 33k tokens (3.3%)
+
+Auto-compact window: 1m tokens
+
+MCP tools · /mcp (loaded on-demand)
+└ 60 tools · 0 tokens
+
+Memory files · /memory
+└ 2 files · 324 tokens
+
+Skills · /skills
+└ 19 skills · 2.9k tokens
+```
+
+Taken mid-session, so Messages is not zero, and System tools varies by session. The line to compare is Skills: 32 skills at 6k before, 19 at 2.9k after.
 
 ## What to cut first
 
