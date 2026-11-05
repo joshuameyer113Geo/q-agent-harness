@@ -8,8 +8,9 @@ Loaded on demand, not always. It can grow.
 ## Why keep it
 
 A single entry is worth little. The value shows up when the same lesson
-appears three times. That repetition is the signal that something should be
-promoted to a procedure (Tier 4) or a hot rule (Tier 1). See
+repeats. Two times, and only after the caller approves, is the signal to
+promote it to a hot rule (Tier 1). Three times is the signal to promote it
+to a procedure (Tier 4). See
 `COMPACTION.md` at the repo root.
 
 Write the entry when the task ends, while you still remember what went
@@ -82,4 +83,12 @@ task: vol 4 build prompts
 approach: wrote prompts with correction notes
 result: all five projects shipped
 lesson: : state merge or preserve intent explicitly in prompts
+```
+
+```
+date: 2026-11-05
+task: Lower the hot-memory promotion threshold
+approach: Searched the repo for the three-times promotion signal and changed only the episodic-to-hot path. Left the procedure path at three repetitions.
+result: Hot-memory promotion now reads as two times in the task log, and only after the caller approves. Hot memory stayed under the token budget.
+lesson: Promote a one-sentence lesson from the episodic task log to hot memory after it repeats two times and the caller approves. Procedures still wait for three.
 ```

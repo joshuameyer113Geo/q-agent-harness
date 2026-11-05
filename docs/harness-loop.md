@@ -85,14 +85,14 @@ A lost edit is worth logging. It's the thing you'll be tempted to add again next
 
 Google's agent does one more thing, and this kit already has the shape of it. After every task, their system saves the harnesses it kept and the lessons it learned into a library that guides future edits. That's a second level of the loop, where the system also learns which kinds of edits tend to win.
 
-Here, that's [COMPACTION.md](../COMPACTION.md). When the same lesson shows up three times in the task log, it moves up a tier, into a procedure or a hot memory rule. Run `scripts/compact --dry-run` after you've done the loop a few times and it will propose the promotions for you.
+Here, that's [COMPACTION.md](../COMPACTION.md). When the same lesson shows up two times in the task log, and the caller approves, it can become a hot memory rule. When it shows up three times, it can become a procedure. Run `scripts/compact --dry-run` after you've done the loop a few times and it will propose the promotions for you.
 
 So the full picture is:
 
 ```
    loop      ──►  task log       one line per edit, won or lost
-   task log  ──►  compaction     a lesson that repeats three times moves up
-   compaction──►  hot memory     and the next loop starts from a better file
+   task log  ──►  compaction     a lesson that repeats two times moves up
+   compaction──►  hot memory     after the caller approves, the next loop starts from a better file
 ```
 
 Which is why this week the move is to test the rules you already have before you add a single new one.
