@@ -59,8 +59,9 @@ prevented a real mistake.
 
 ## When to add a rule
 
-Add a rule when the agent has made the same mistake twice and the fix is a
-single sentence. Once is noise. Twice is a pattern.
+Add a rule when the same lesson has repeated two times in the episodic
+task log, the fix is a single sentence, and the caller approves. Once is
+noise. Two times is a pattern.
 
 If the fix takes more than a sentence, it is a procedure, not a hot rule.
 

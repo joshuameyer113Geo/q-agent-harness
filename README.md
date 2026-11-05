@@ -131,8 +131,9 @@ lesson. Written when the task ends, while you still remember what went
 wrong.
 
 One entry is worth little. The value appears when the same lesson shows up
-three times, because that repetition is the signal that something should
-move up a tier.
+two times, and the caller approves, because that repetition is the signal
+to promote it to hot memory. Three times, when the fix is longer than one
+sentence, is the signal for a procedure.
 
 ### Tier 3: Semantic
 

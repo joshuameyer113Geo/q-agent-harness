@@ -35,7 +35,7 @@ Building Liora's brain: a memory harness for Grok running on Joshua's cloud box.
 - Grok Bots are long-lived agents on Joshua's cloud computer. Their replies arrive as updates, not inline.
 - bot_list_agents returns the only valid agent_id values. Never guess or shorten an id.
 - The four memory tiers: hot is always loaded, episodic grows on demand, semantic loads when relevant, procedural is stable how-to. Compaction moves lessons up: episodic becomes procedural becomes hot.
-- A lesson repeating three times is the signal to promote it. One occurrence is noise.
+- A lesson repeating two times in the episodic task log is the signal to promote it to hot memory, and only after Joshua approves. One occurrence is noise.
 - Joshua's GitHub handle is joshuameyer113Geo. His most recent skill repo is my-agent-skills.
 
 ## Escalate

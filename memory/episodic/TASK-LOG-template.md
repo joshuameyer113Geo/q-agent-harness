@@ -8,8 +8,9 @@ Loaded on demand, not always. It can grow.
 ## Why keep it
 
 A single entry is worth little. The value shows up when the same lesson
-appears three times. That repetition is the signal that something should be
-promoted to a procedure (Tier 4) or a hot rule (Tier 1). See
+repeats. Two times, and only after the caller approves, is the signal to
+promote it to a hot rule (Tier 1). Three times is the signal to promote it
+to a procedure (Tier 4). See
 `COMPACTION.md` at the repo root.
 
 Write the entry when the task ends, while you still remember what went

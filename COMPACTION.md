@@ -43,8 +43,9 @@ what done looks like. See
 
 The narrow path.
 
-Same trigger, three repetitions, but the fix fits in one sentence and
-applies to every task rather than one kind of task.
+The lesson repeats two times in the episodic task log, and the caller
+approves before it is promoted. The fix fits in one sentence and applies
+to every task rather than one kind of task.
 
 "Never log a full invoice payload" is a hot rule. "How to review legacy
 code" is not, no matter how often it comes up, because it is nine steps
@@ -97,8 +98,10 @@ Run this against your task log whenever it has grown by ten entries or so:
 
 Then judge each proposal yourself. The agent can see repetition, which is
 the hard part, but it cannot tell the difference between a lesson that
-repeated three times because it matters and one that repeated because you
-worked on the same subsystem three weeks running.
+repeated two times because it matters and one that repeated because you
+worked on the same subsystem three weeks running. A hot-memory rule is
+promoted only after that second repetition and only after the caller
+approves. A procedure still waits for a third repetition.
 
 For each proposal, decide:
 
@@ -138,9 +141,10 @@ An agent with memory but no compaction has a filing cabinet. It accumulates,
 it does not improve.
 
 The improvement comes from the movement. A mistake happens once and lands in
-the task log. It happens twice and it is a pattern. It happens a third time
-and it becomes a procedure, and from then on the agent runs the steps that
-prevent it instead of rediscovering the problem.
+the task log. It happens two times and it is a pattern. If that pattern fits
+in one sentence and the caller approves, it is promoted to hot memory. It
+happens a third time and it becomes a procedure, and from then on the agent
+runs the steps that prevent it instead of rediscovering the problem.
 
 That is the difference between an agent that has been running for six months
 and one that has been running for six months and learned something. Without
@@ -149,8 +153,10 @@ compaction those are the same agent.
 ## The compact script
 
 `scripts/compact` automates the promotion step. It does the part that is
-genuinely mechanical, which is noticing that three entries written months
-apart are saying the same thing.
+genuinely mechanical, which is noticing that the same lesson shows up
+two times in entries written months apart. That is the signal for a
+hot-memory rule, and the caller approves before it is written. A procedure
+still waits until the lesson shows up three times.
 
 ```
 scripts/compact --dry-run                     # see the proposals, write nothing
